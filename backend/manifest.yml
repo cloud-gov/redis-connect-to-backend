@@ -1,0 +1,11 @@
+---
+applications:
+- name: backend-app
+  routes: 
+  - route: ((route)) # should use apps.internal
+  buildpacks:
+  - nodejs_buildpack
+  memory: 256M
+  services:
+  - ((service-name))
+  health-check-type: process
