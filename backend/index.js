@@ -34,7 +34,7 @@ subscriber.on("subscribe", (channel) => {
 });
 
 // Echo back to the front end what was received. While this example keeps it simple, you 
-// could ad more complex functionality to this application if needed.
+// could add more complex functionality to this application if needed.
 subscriber.on("message",(channel, message) => {
     publisher.publish(publishChannel, `Received "${message}" from the front end app on "${channel}" channel`);
 });
