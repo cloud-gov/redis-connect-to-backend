@@ -33,7 +33,8 @@ subscriber.on("subscribe", (channel) => {
     console.log(`Subscribed to channel: ${channel}`);
 });
 
-// Echo back to the front end what was received.
+// Echo back to the front end what was received. While this example keeps it simple, you 
+// could ad more complex functionality to this application if needed.
 subscriber.on("message",(channel, message) => {
     publisher.publish(publishChannel, `Received "${message}" from the front end app on "${channel}" channel`);
 });

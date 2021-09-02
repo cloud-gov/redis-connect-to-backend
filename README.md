@@ -1,16 +1,19 @@
-# Redis Connect to cloud.gov backend service
+# Redis connect to cloud.gov backend service
 
-This is a demo application that shows how to use Redis pub/sub to connect a frontend application to a backend service using a [brokered instance of AWS Elasticache](https://cloud.gov/docs/services/aws-elasticache/).
+This is a demo application that shows how to use Redis pub/sub to securely connect a frontend application to a backend service using a [brokered instance of AWS Elasticache](https://cloud.gov/docs/services/aws-elasticache/).
+
+In the example, the backend application simply echos back a message sent by the front end, but this approach could support much more complex backend functions if needed.
 
 Benefits:
 
-* Traffic between a frontend application and a backend service running on a separate container are encrypted using SSL.
+* Traffic between a frontend application and a backend service running on a separate container are fully encrypted using SSL.
 * No need to create or manage network policies. All communications between the frontend and backend app happen through Redis.
 
 Drawbacks:
 
 * This approach to breaking out services might not be a good fit for all scenarios.
 * If/when traffic between containers in Cloud Foundry is done natively using SSL, this approach might add unneeded complexity.
+* Additional logic to manage or restore connections to Redis would likely be needed if this approach were to be used for a production application.
 
 
 ## Instructions
