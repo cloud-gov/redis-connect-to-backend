@@ -14,6 +14,7 @@ Drawbacks:
 * This approach to breaking out services might not be a good fit for all scenarios.
 * If/when traffic between containers in Cloud Foundry is done natively using SSL, this approach might add unneeded complexity.
 * Additional logic to manage or restore connections to Redis would likely be needed if this approach were to be used for a production application.
+* Potential for latency to be introduced as traffic goes to AWS between frontend and backend apps.
 
 
 ## Instructions
