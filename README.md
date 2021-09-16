@@ -6,7 +6,7 @@ In the example, the backend application simply echos back a message sent by the 
 
 Benefits:
 
-* Traffic between a frontend application and a backend service running on a separate container are fully encrypted using SSL.
+* Traffic between a frontend application and a backend service running on a separate container are fully encrypted.
 * No need to create or manage network policies. All communications between the frontend and backend app happens through Redis.
 
 Drawbacks:
